@@ -48,20 +48,92 @@ struct No* criar_no(const int* valor){
 }
 
 
+
+struct No* inserir(struct No* raiz, const int* valor) {
+    if (raiz == NULL)
+        return criar_no(valor);
+    if (*valor < raiz->dados)
+        raiz->esquerda = inserir(raiz->esquerda, valor);
+    else if (*valor > raiz->dados)
+        raiz->direita = inserir(raiz->direita, valor);
+    return raiz;
+}
+
+
+
 int buscar(struct No* raiz, const int* key){
     if (raiz == NULL)
     {
         return 0;
     }
 
-        if ((key, raiz->dados) == 0)
+        if (*key == raiz->dados)
             return 1;
-        else if (key, raiz->dados < 0)
+        else if (*key < raiz->dados)
             return buscar(raiz->esquerda, key);
         else
-            return buscar(raiz->direita, key);
+            return buscar(raiz->direita , key);
 
         // O algoritmo segue a lógica da inserção: se o valor é menor, buscamos à esquerda.
         // Se maior, à direita. Quando encontramos, retornamos 1; caso contrário, 0.
         
 }
+
+void preOrdem(struct No* raiz){
+    if (raiz != NULL)
+    {
+        printf("%s \n", raiz->dados);
+        preOrdem(raiz->esquerda);
+        preOrdem(raiz->direita);
+    }
+    
+}
+
+
+void emOrdem(struct No* raiz){
+    if (raiz != NULL)
+    {
+        emOrdem(raiz->esquerda);
+        printf("%s, \n", raiz->dados);
+        emOrdem(raiz->direita);
+    }
+    
+}
+
+
+/**
+ * Essa proxima funçao e a msi importante onde nao pode haver esqueciemnto pois m c isso e liberdade
+ * e ao esquece essa funçao pode haver estouro d memoria a funçao liberar com o free para liberar
+ * todos os espaços alocados com malloc
+ */
+
+ void liberar(struct No* raiz){
+    if (raiz != NULL)
+    {
+        liberar(raiz->esquerda); // Liberando espacos em meoria ara no esquerdo e para o direito 
+
+        liberar(raiz->direita);
+        free(raiz);
+    }
+    
+ }
+
+
+ int main(){
+    struct No* raiz = NULL;
+    
+    int valores[] = {50,20,80,40,12,13,11};
+    int buscar_chave = 12;
+
+    for ( int i = 0; i < 7; i++)
+    {
+        raiz = inserir(raiz, &valores[i]);
+    }
+
+    printf("Em ordem\n");
+    emOrdem(raiz);
+
+    buscar(buscar_chave);
+    printf("Bus")
+    
+ }
