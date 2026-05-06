@@ -1,0 +1,39 @@
+...............................................................
+malloc — aloca memória bruta
+Reserva um bloco de memória do tamanho especificado
+Não inicializa — o conteúdo é lixo
+Retorna NULL se falhar
+...............................................................
+
+...............................................................
+calloc — aloca e zera
+Igual ao malloc, mas inicializa tudo com zero
+Útil quando você precisa de um estado limpo garantido
+...............................................................
+
+...............................................................
+realloc — redimensiona um bloco existente
+Expande ou encolhe um bloco já alocado
+Pode mover o bloco para outro endereço — por isso você sempre reatribui o ponteiro
+Se ptr == NULL, age como malloc
+...............................................................
+
+...............................................................
+free — libera a memória
+Devolve o bloco ao sistema
+Deve ser chamado exatamente uma vez por alocação
+Após o free, zere o ponteiro para evitar uso acidental
+...............................................................
+
+int* v = malloc(n * sizeof(int));
+if (!v) { /* trate o erro */ return; }
+
+// ... usa v ...
+
+v = realloc(v, novo_n * sizeof(int));
+if (!v) { /* bloco original já foi perdido — trate */ return; }
+
+// ... usa v com novo tamanho ...
+
+free(v);
+v = NULL;
