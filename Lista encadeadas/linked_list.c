@@ -26,32 +26,29 @@ struct No
 
 //.................................................................................
 
-struct No* criando(void){
-    struct No* primeiro = (struct No*)malloc(sizeof(struct No));
-    struct No* segundo = (struct No*)malloc(sizeof(struct No));
-    struct No* terceiro = (struct No*)malloc(sizeof(struct No));
-    struct No* quarto = (struct No*)malloc(sizeof(struct No));
-    struct No* quinto = (struct No*)malloc(sizeof(struct No));
+struct No* inserir(struct No* cabeca, int valor){
+    struct No* novo = (struct No*)malloc(sizeof(struct No));
 
-    primeiro->dados = 10;
-    primeiro->proximo = segundo;
+    novo->dados = valor;
+    novo->proximo = cabeca;
 
-    segundo->dados = 20;
-    segundo->proximo = terceiro;
-
-    terceiro->dados = 30;
-    terceiro->proximo = quarto;
-
-    quarto->dados = 40;
-    quarto->proximo = quinto;
-
-    quinto->dados = 50;
-    quinto->proximo = NULL;
-
-
-    return primeiro;
-
+    return novo;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * Umas das partes mais importante onde pode haver esqueciemnto, a liberaçao da memoria alocada
  */
@@ -68,9 +65,16 @@ void liberarLista(struct No* cabeca) {
 
 
 int main(){
-    struct No* lista = criando();
+    struct No* lista = NULL;
+
+    lista = inserir(lista, 50);
+    lista = inserir(lista, 40);
+    lista = inserir(lista, 30);
+    lista = inserir(lista, 20);
+    lista = inserir(lista, 10);
 
     struct No* atual = lista;
+    
     while (atual != NULL)
     {
         printf("Dados -> %d`", atual->dados);
