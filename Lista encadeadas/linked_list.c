@@ -34,10 +34,20 @@ void criando(struct No* proximo){
     struct No* quinto = (struct No*)malloc(sizeof(struct No));
 
     primeiro->dados = 10;
-    proximo->proximo = segundo;
+    proximo->dados = segundo;
 
     segundo->dados = 20;
-    
+    proximo->dados = terceiro;
+
+    terceiro->dados = 30;
+    proximo->dados = quarto;
+
+    quarto->dados = 40;
+    proximo->dados = quinto;
+
+    quinto->dados = 50;
+    proximo->dados = NULL;
+
     
 }
 
