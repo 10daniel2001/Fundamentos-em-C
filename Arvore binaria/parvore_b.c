@@ -82,7 +82,7 @@ int buscar(struct No* raiz, const int* key){
 void preOrdem(struct No* raiz){
     if (raiz != NULL)
     {
-        printf("%s \n", raiz->dados);
+        printf("-%d- \n", raiz->dados);
         preOrdem(raiz->esquerda);
         preOrdem(raiz->direita);
     }
@@ -94,7 +94,7 @@ void emOrdem(struct No* raiz){
     if (raiz != NULL)
     {
         emOrdem(raiz->esquerda);
-        printf("%s, \n", raiz->dados);
+        printf("-%d- \n", raiz->dados);
         emOrdem(raiz->direita);
     }
     
@@ -132,8 +132,15 @@ void emOrdem(struct No* raiz){
 
     printf("Em ordem\n");
     emOrdem(raiz);
-
-    buscar(buscar_chave);
-    printf("Bus")
     
+    printf("\n");
+
+    printf("Pre ordem\n");
+    preOrdem(raiz);
+
+    printf("\nBuscar chave %d: %s\n", buscar_chave,  buscar(raiz, &buscar_chave)? "Encontrado":"Nao encontrado");
+    
+    liberar(raiz);
+
+    return 0;
  }
