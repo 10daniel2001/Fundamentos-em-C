@@ -26,12 +26,11 @@ typedef struct Fila {
     int total;
 } Fila;
 
-
 void inicializar(Fila* f);
 int fila_vazia(Fila* f);
 int fila_cheia(Fila* f);
 void enfileirar(Fila* f, Pessoas p);
 void desenfileirar(Fila* f, Pessoas* p);
-void emprimir(Fila *f);
+void imprimir(Fila* f);
 
 #endif

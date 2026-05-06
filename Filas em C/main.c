@@ -16,7 +16,7 @@ int main(){
     Pessoas p4 = {"Marcos __Quarto", 34};
     Pessoas p5 = {"Manuel __Quinto", 33};
 
-    printf("Enfileirando");
+    printf("Enfileirando\n");
     enfileirar(&f, p1);
     enfileirar(&f, p2);
     enfileirar(&f, p3);
