@@ -8,8 +8,8 @@
 
 void bubble(int *vetor, int n){
     int i, j, temp;
-    int contador, incremento;
-    int comparaçoes;
+    int contador, incremento = 0;
+    int comparaçoes = 0;
 
     // variavel I para o primeiro loop for, j para o segund loop for, ou sej ai para o externo e j para interno
     // variavel contador para contar quantas passada o loop externo faz
