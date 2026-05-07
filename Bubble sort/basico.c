@@ -16,7 +16,9 @@ void bubble(int *vetor, int n){
     // incremento conta a do loop for interno 
 
 
-
+    /*Esse simples metodo de ordenaçao tem a complexidade O(n²)
+      ultilizamos dois for aninhados e comparando valores 
+    */
 
 
 
@@ -44,6 +46,9 @@ void bubble(int *vetor, int n){
         {
             break;
         }
+
+        //Isso melhora o melhor caso para O(n) — vetor já ordenado,
+        //faz só 1 passada. Mas o pior caso continua O(n²), e Big-O mede o pior caso.
         
         
     }
