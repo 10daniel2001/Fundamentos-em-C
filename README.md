@@ -12,6 +12,10 @@ Estudante: Daniel | 3º semestre | Linux | C | Rust
 ...................................................
 Implementações do zero, versionadas e documentadas.
 
+## Como compilar
+
+gcc -g arquivo.c -o arquivo
+
 ## Estruturas
 
 - [x] Lista Ligada
