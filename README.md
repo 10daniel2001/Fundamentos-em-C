@@ -1,21 +1,11 @@
 # Fundamentos em C
-# Repositorio para fins educacional
 
-ESTRUTURAS DE DADOS EM C EMUITO ENSENCIAL PARA MEU APRENDIZADO UMA BASE MUITO PROFUNDA
-ESSE README E TUDO RELACIONADO A ESTRUTURAS DE DADOS ESTA SENDO CRIADA APARTI DE MEUS ESTUDO PELA FACULDADE ESTACIO, ONDE EU DEPOSITO TUDO QUE APRENDO SEM UMA FERRAMENTA ESENCIAL A IA !
+Implementações de estruturas de dados em C, 
+construídas do zero durante minha graduação em 
+Engenharia de Software.
 
-#primeira estrutura e a ser colocada e a arvore binaria bst
-# Estruturas de Dados em C
+Cada estrutura tem sua própria pasta com 
+implementação comentada e README explicando 
+o funcionamento e a complexidade.
 
-Implementações do zero, versionadas e documentadas.
-
-## Estruturas
-
-- [x] Lista Ligada
-- [x] Fila
-- [x] Árvore
-- [ ] Pilha
-- [ ] Tabela Hash
-- [ ] Ordenação
-
-## Em Rust (em breve)
+Estudante: Daniel | 3º semestre | Linux | C | Rust
