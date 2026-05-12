@@ -41,3 +41,13 @@ void selection_sort(int vetr[], int n){
     }
     
 }
+
+
+int main(){
+
+    // vetor original desorganizado
+    int vetor[] = {50,6,88,44,8,7};
+    int n = sizeof(vetor)/sizeof(vetor[0]);
+
+    
+}
