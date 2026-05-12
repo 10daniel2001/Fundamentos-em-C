@@ -24,6 +24,19 @@ void selection_sort(int vetr[], int n){
     {
         idx_mini = i;
 
+        for (j = i + 1; j < n; j++)
+        {
+            if (vetr[j] < vetr[idx_mini])
+            {
+                idx_mini = j;
+            }
+            
+        }
+        if (idx_mini != i)
+        {
+            trocar(&vetr[i], &vetr[idx_mini]);
+        }
+        
         
     }
     
