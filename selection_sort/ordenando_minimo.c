@@ -5,3 +5,11 @@
   ela vai fazer a troca exata no array quando necessario*/
 
 #include <stdio.h>
+
+// Funçao de trocar ultilzando ponteiros para referencia
+
+void trocar(int* a, int* b){
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
