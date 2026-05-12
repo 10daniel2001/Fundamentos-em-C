@@ -13,3 +13,18 @@ void trocar(int* a, int* b){
     *a = *b;
     *b = temp;
 }
+
+
+
+// parte onde obtem o percorrimento 
+void selection_sort(int vetr[], int n){
+    int i , j, idx_mini;
+
+    for ( i = 0; i < n -1; i++)
+    {
+        idx_mini = i;
+
+        
+    }
+    
+}
