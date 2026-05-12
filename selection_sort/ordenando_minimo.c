@@ -49,5 +49,19 @@ int main(){
     int vetor[] = {50,6,88,44,8,7};
     int n = sizeof(vetor)/sizeof(vetor[0]);
 
+     
+    printf("Vetor original: "); 
+    for (int i = 0; i < n; i++) { 
+        printf("%d ", vetor[i]); 
+    }
+    printf("\n"); 
     
+    selection_sort(vetor, n); 
+ 
+    printf("Vetor ordenado: "); 
+    for (int i = 0; i < n; i++) { 
+        printf("%d ", vetor[i]); 
+    } 
+    
+    return 0; 
 }
