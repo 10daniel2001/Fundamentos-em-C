@@ -13,7 +13,20 @@ void trocar(int* a, int* b){
     *a = *b;
     *b = temp;
 }
+/*
 
+O algoritmo possui dois laços aninhados,
+os quais garantem que cada elemento seja comparado com todos os outros na parte não ordenada do vetor.
+Isso resulta em um número de comparações da ordem de O(n2),
+independentemente da organização inicial dos dados.
+
+
+O algoritmo é muito eficiente em trocas.
+Ele realiza apenas uma troca por passagem do laço principal,
+totalizando, no máximo, n-1 trocas. Portanto, a complexidade da operação de troca é O(n).
+
+selection sort e in place
+*/
 
 
 // parte onde obtem o percorrimento 
